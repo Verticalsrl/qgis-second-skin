@@ -10,7 +10,7 @@ about=Retro Skin is a playful plugin for GIS nostalgics: it does not add any ana
 
     Everyone is free to create and share their own skins: a skin is just a folder with a skin.json file, a Qt stylesheet (style.qss) and 16/32 px PNG icons. Copy an existing skin folder, edit it, and it will show up in the menu. See the README in the repository for the format.
 
-    All icons are original pixel art. ArcView and ArcMap are trademarks of Esri: this plugin is an unofficial homage, not affiliated with or endorsed by Esri.
+    All icons are original pixel art. ArcView and ArcMap are trademarks of Esri. Retro Skin is an independent project, not affiliated with or endorsed by Esri: skin names only describe a visual style.
 
 description[it]=Solo per gioco: cambia al volo l'aspetto di QGIS con skin retro (Vintage 95, ArcView 3.x style, ArcMap 8.x style). Un giocattolo per i nostalgici del GIS, e ognuno puo' creare liberamente le proprie skin!
 about[it]=Retro Skin e' un plugin giocoso per i nostalgici del GIS: non aggiunge funzioni di analisi, veste semplicemente QGIS come i GIS desktop degli anni '90 e primi 2000, per un sorriso e un tuffo nei ricordi.
@@ -19,7 +19,7 @@ about[it]=Retro Skin e' un plugin giocoso per i nostalgici del GIS: non aggiunge
 
     Ognuno e' libero di creare e condividere le proprie skin: una skin e' solo una cartella con un file skin.json, un foglio di stile Qt (style.qss) e icone PNG da 16/32 px. Copia la cartella di una skin esistente, modificala e comparira' nel menu. Il formato e' descritto nel README del repository.
 
-    Tutte le icone sono pixel-art originale. ArcView e ArcMap sono marchi di Esri: questo plugin e' un omaggio non ufficiale, non affiliato ne' approvato da Esri.
+    Tutte le icone sono pixel-art originale. ArcView e ArcMap sono marchi di Esri. Retro Skin e' un progetto indipendente, non affiliato ne' approvato da Esri: i nomi delle skin descrivono solo uno stile grafico.
 version=0.5.0
 author=Vertical S.r.l.
 email=info@vertical-srl.it

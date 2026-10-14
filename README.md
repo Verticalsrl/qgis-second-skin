@@ -82,8 +82,8 @@ files required by the repository.
 ## License and trademarks
 
 GPL v2 or later, see [LICENSE](LICENSE). All icons are original pixel art.
-ArcView and ArcMap are trademarks of Esri: this plugin is an unofficial homage,
-not affiliated with or endorsed by Esri.
+ArcView and ArcMap are trademarks of Esri. Retro Skin is an independent project,
+not affiliated with or endorsed by Esri: skin names only describe a visual style.
 
 ---
 
@@ -108,5 +108,5 @@ nella sezione inglese qui sopra (`description_it` è la descrizione in italiano)
 
 Hai fatto una bella skin? Apri una pull request o una issue!
 
-ArcView e ArcMap sono marchi di Esri: questo plugin è un omaggio non ufficiale,
-non affiliato né approvato da Esri. Licenza GPL v2 o successiva.
+ArcView e ArcMap sono marchi di Esri. Retro Skin è un progetto indipendente,
+non affiliato né approvato da Esri: i nomi delle skin descrivono solo uno stile grafico. Licenza GPL v2 o successiva.
