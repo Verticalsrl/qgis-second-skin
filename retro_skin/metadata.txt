@@ -1,0 +1,42 @@
+[general]
+name=Retro Skin
+qgisMinimumVersion=3.22
+qgisMaximumVersion=4.99
+supportsQt6=True
+description=Just for fun: switch the QGIS look on the fly with retro skins (Vintage 95, ArcView 3.x style, ArcMap 8.x style). A playful toy for GIS nostalgics, and anyone can freely create their own skins!
+about=Retro Skin is a playful plugin for GIS nostalgics: it does not add any analysis feature, it just dresses QGIS up like the desktop GIS of the '90s and early 2000s, for a smile and a trip down memory lane.
+
+    Included skins: Vintage 95, ArcView 3.x style, ArcMap 8.x style. Switch skins from Plugins > Retro Skin, from the toolbar button or with Ctrl+Alt+K; "QGIS (original)" restores the standard look.
+
+    Everyone is free to create and share their own skins: a skin is just a folder with a skin.json file, a Qt stylesheet (style.qss) and 16/32 px PNG icons. Copy an existing skin folder, edit it, and it will show up in the menu. See the README in the repository for the format.
+
+    All icons are original pixel art. ArcView and ArcMap are trademarks of Esri: this plugin is an unofficial homage, not affiliated with or endorsed by Esri.
+
+description[it]=Solo per gioco: cambia al volo l'aspetto di QGIS con skin retro (Vintage 95, ArcView 3.x style, ArcMap 8.x style). Un giocattolo per i nostalgici del GIS, e ognuno puo' creare liberamente le proprie skin!
+about[it]=Retro Skin e' un plugin giocoso per i nostalgici del GIS: non aggiunge funzioni di analisi, veste semplicemente QGIS come i GIS desktop degli anni '90 e primi 2000, per un sorriso e un tuffo nei ricordi.
+
+    Skin incluse: Vintage 95, ArcView 3.x style, ArcMap 8.x style. Si cambiano da Plugin > Retro Skin, dal pulsante in toolbar o con Ctrl+Alt+K; "QGIS (originale)" ripristina l'aspetto standard.
+
+    Ognuno e' libero di creare e condividere le proprie skin: una skin e' solo una cartella con un file skin.json, un foglio di stile Qt (style.qss) e icone PNG da 16/32 px. Copia la cartella di una skin esistente, modificala e comparira' nel menu. Il formato e' descritto nel README del repository.
+
+    Tutte le icone sono pixel-art originale. ArcView e ArcMap sono marchi di Esri: questo plugin e' un omaggio non ufficiale, non affiliato ne' approvato da Esri.
+version=0.5.0
+author=Vertical S.r.l.
+email=info@vertical-srl.it
+
+homepage=https://github.com/verticalsrl/qgis-second-skin
+repository=https://github.com/verticalsrl/qgis-second-skin
+tracker=https://github.com/verticalsrl/qgis-second-skin/issues
+
+changelog=0.5.0
+    - First public release on the QGIS plugin repository
+    - Skins: Vintage 95, ArcView 3.x style, ArcMap 8.x style
+    - Retro toolbars, menu and panel titles per skin
+    - "Open skins folder" menu entry to create your own skins
+
+category=Plugins
+icon=skins/arcview3/icons/arcskin@2x.png
+experimental=True
+deprecated=False
+hasProcessingProvider=no
+tags=theme,skin,ui,retro,fun,nostalgia,style,icons

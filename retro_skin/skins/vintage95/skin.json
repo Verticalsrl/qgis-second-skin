@@ -1,0 +1,26 @@
+{
+  "name": "Vintage 95",
+  "description": "Windows 95 grey, raised buttons and 16x16 pixel-art icons",
+  "description_it": "Grigio Windows 95, bottoni a rilievo e icone pixel-art 16x16",
+  "stylesheet": "style.qss",
+  "toolbar_icon_size": 16,
+  "icons": {
+    "new":        ["mActionNewProject"],
+    "open":       ["mActionOpenProject"],
+    "save":       ["mActionSaveProject"],
+    "pan":        ["mActionPan"],
+    "zoom_in":    ["mActionZoomIn"],
+    "zoom_out":   ["mActionZoomOut"],
+    "zoom_full":  ["mActionZoomFullExtent"],
+    "identify":   ["mActionIdentify"],
+    "select":     ["mActionSelectFeatures", "mActionSelectRectangle"],
+    "deselect":   ["mActionDeselectAll"],
+    "measure":    ["mActionMeasure"],
+    "add_vector": ["mActionAddOgrLayer"],
+    "add_raster": ["mActionAddRasterLayer"],
+    "table":      ["mActionOpenTable"],
+    "layout":     ["mActionNewPrintLayout"],
+    "edit":       ["mActionToggleEditing"],
+    "refresh":    ["mActionDraw"]
+  }
+}

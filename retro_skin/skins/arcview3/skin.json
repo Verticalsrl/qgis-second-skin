@@ -1,0 +1,144 @@
+{
+  "name": "ArcView 3.x style",
+  "description": "'90s desktop GIS: Themes, raised Table of Contents, original pixel-art icons",
+  "description_it": "GIS desktop anni '90: Theme, Table of Contents a rilievo, icone pixel-art originali",
+  "stylesheet": "style.qss",
+  "toolbar_icon_size": 16,
+  "icons": {
+    "new": [
+      "mActionNewProject"
+    ],
+    "open": [
+      "mActionOpenProject"
+    ],
+    "save": [
+      "mActionSaveProject"
+    ],
+    "print": [
+      "mActionNewPrintLayout"
+    ],
+    "add_theme": [
+      "mActionAddOgrLayer",
+      "mActionDataSourceManager"
+    ],
+    "pan": [
+      "mActionPan"
+    ],
+    "zoom_in": [
+      "mActionZoomIn"
+    ],
+    "zoom_out": [
+      "mActionZoomOut"
+    ],
+    "zoom_full": [
+      "mActionZoomFullExtent"
+    ],
+    "zoom_layer": [
+      "mActionZoomToLayer",
+      "mActionZoomToLayers"
+    ],
+    "zoom_selected": [
+      "mActionZoomToSelected"
+    ],
+    "identify": [
+      "mActionIdentify"
+    ],
+    "select": [
+      "mActionSelectFeatures",
+      "mActionSelectRectangle"
+    ],
+    "deselect": [
+      "mActionDeselectAll"
+    ],
+    "query": [
+      "mActionSelectByExpression"
+    ],
+    "find": [
+      "mActionSelectByForm"
+    ],
+    "measure": [
+      "mActionMeasure"
+    ],
+    "table": [
+      "mActionOpenTable"
+    ],
+    "layout": [
+      "mActionShowLayoutManager"
+    ],
+    "edit": [
+      "mActionToggleEditing"
+    ],
+    "refresh": [
+      "mActionDraw"
+    ],
+    "help": [
+      "mActionHelpContents"
+    ],
+    "zoom_prev": [
+      "mActionZoomLast"
+    ],
+    "hotlink": [
+      "mActionFeatureAction"
+    ],
+    "properties": [
+      "mActionLayerProperties"
+    ],
+    "vertex": [
+      "mActionVertexTool",
+      "mActionVertexToolActiveLayer"
+    ]
+  },
+  "menus": {
+    "mProjectMenu": "&File",
+    "mEditMenu": "&Edit",
+    "mViewMenu": "&View",
+    "mLayerMenu": "&Theme",
+    "mSettingsMenu": "&Window",
+    "mHelpMenu": "&Help"
+  },
+  "docks": {
+    "Layers": "Table of Contents",
+    "Browser": "Project"
+  },
+  "toolbars": [
+    {
+      "name": "ArcView Button Bar",
+      "actions": [
+        "mActionSaveProject",
+        "mActionDataSourceManager",
+        "mActionLayerProperties",
+        "mActionOpenTable",
+        "|",
+        "mActionSelectByForm",
+        "mActionSelectByExpression",
+        "|",
+        "mActionZoomFullExtent",
+        "mActionZoomToLayer",
+        "mActionZoomToSelected",
+        "mActionZoomLast",
+        "|",
+        "mActionDeselectAll",
+        "mActionNewPrintLayout",
+        "mActionDraw",
+        "|",
+        "mActionHelpContents"
+      ]
+    },
+    {
+      "name": "ArcView Tool Bar",
+      "actions": [
+        "mActionIdentify",
+        "mActionSelectFeatures",
+        "mActionVertexTool",
+        "|",
+        "mActionZoomIn",
+        "mActionZoomOut",
+        "mActionPan",
+        "mActionMeasure",
+        "mActionFeatureAction",
+        "|",
+        "mActionToggleEditing"
+      ]
+    }
+  ]
+}

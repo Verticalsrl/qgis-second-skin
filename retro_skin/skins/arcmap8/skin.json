@@ -1,0 +1,133 @@
+{
+  "name": "ArcMap 8.x style",
+  "description": "Early 2000s desktop GIS: Windows 2000, flat toolbars, light blue selection",
+  "description_it": "GIS desktop primi anni 2000: Windows 2000, toolbar piatte, selezione azzurra",
+  "stylesheet": "style.qss",
+  "toolbar_icon_size": 16,
+  "icons": {
+    "new": [
+      "mActionNewProject"
+    ],
+    "open": [
+      "mActionOpenProject"
+    ],
+    "save": [
+      "mActionSaveProject"
+    ],
+    "print": [
+      "mActionNewPrintLayout"
+    ],
+    "add_data": [
+      "mActionAddOgrLayer",
+      "mActionDataSourceManager"
+    ],
+    "zoom_in": [
+      "mActionZoomIn"
+    ],
+    "zoom_out": [
+      "mActionZoomOut"
+    ],
+    "pan": [
+      "mActionPan"
+    ],
+    "full_extent": [
+      "mActionZoomFullExtent"
+    ],
+    "prev_extent": [
+      "mActionZoomLast"
+    ],
+    "next_extent": [
+      "mActionZoomNext"
+    ],
+    "select": [
+      "mActionSelectFeatures",
+      "mActionSelectRectangle"
+    ],
+    "clear_selection": [
+      "mActionDeselectAll"
+    ],
+    "identify": [
+      "mActionIdentify"
+    ],
+    "find": [
+      "mActionSelectByForm"
+    ],
+    "measure": [
+      "mActionMeasure"
+    ],
+    "hyperlink": [
+      "mActionFeatureAction"
+    ],
+    "table": [
+      "mActionOpenTable"
+    ],
+    "layout": [
+      "mActionShowLayoutManager"
+    ],
+    "edit": [
+      "mActionToggleEditing"
+    ],
+    "refresh": [
+      "mActionDraw"
+    ],
+    "help": [
+      "mActionHelpContents"
+    ]
+  },
+  "menus": {
+    "mProjectMenu": "&File",
+    "mEditMenu": "&Edit",
+    "mViewMenu": "&View",
+    "mLayerMenu": "&Insert",
+    "mSettingsMenu": "&Tools",
+    "mHelpMenu": "&Help"
+  },
+  "docks": {
+    "Layers": "Table Of Contents",
+    "Browser": "Catalog"
+  },
+  "toolbars": [
+    {
+      "name": "ArcMap Standard",
+      "actions": [
+        "mActionNewProject",
+        "mActionOpenProject",
+        "mActionSaveProject",
+        "mActionNewPrintLayout",
+        "|",
+        "mActionCutFeatures",
+        "mActionCopyFeatures",
+        "mActionPasteFeatures",
+        "|",
+        "mActionUndo",
+        "mActionRedo",
+        "|",
+        "mActionDataSourceManager",
+        "|",
+        "mActionToggleEditing",
+        "mActionOpenTable",
+        "|",
+        "mActionHelpContents"
+      ]
+    },
+    {
+      "name": "ArcMap Tools",
+      "actions": [
+        "mActionZoomIn",
+        "mActionZoomOut",
+        "mActionPan",
+        "mActionZoomFullExtent",
+        "mActionZoomLast",
+        "mActionZoomNext",
+        "|",
+        "mActionSelectFeatures",
+        "mActionDeselectAll",
+        "mActionIdentify",
+        "mActionSelectByForm",
+        "mActionMeasure",
+        "mActionFeatureAction",
+        "mActionDraw"
+      ]
+    }
+  ]
+}
