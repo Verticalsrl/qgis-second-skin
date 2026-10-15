@@ -20,6 +20,7 @@ I created this plugin in a moment of nostalgia for the old days. There is no int
 | ArcView 3.x style | '90s desktop GIS: Themes, raised Table of Contents |
 | ArcMap 8.x style | Early 2000s: Windows 2000, flat toolbars, light blue selection |
 | QGIS 2.x style | QGIS in the Qt4 days: glossy toolbars, Layers Panel, green accents |
+| GRASS GIS 6 style | The Tcl/Tk GIS Manager: Tk grey, raised buttons, flat icons, black map display |
 
 Switch skins from **Plugins > Retro Skin**, from the toolbar button or with
 **Ctrl+Alt+K**. *QGIS (original)* restores the standard look. The interface is

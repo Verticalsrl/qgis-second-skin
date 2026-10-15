@@ -1,0 +1,75 @@
+{
+  "name": "GRASS GIS 6 style",
+  "description": "GRASS GIS 6 with the Tcl/Tk GIS Manager: Tk grey, raised buttons, flat icons and the black map display",
+  "description_it": "GRASS GIS 6 con il GIS Manager in Tcl/Tk: grigio Tk, pulsanti a rilievo, icone piatte e il display nero",
+  "stylesheet": "style.qss",
+  "toolbar_icon_size": 16,
+  "icons": {
+    "new":        ["mActionNewProject"],
+    "open":       ["mActionOpenProject"],
+    "save":       ["mActionSaveProject"],
+    "print":      ["mActionNewPrintLayout"],
+    "add_vector": ["mActionAddOgrLayer"],
+    "add_raster": ["mActionAddRasterLayer"],
+    "pan":        ["mActionPan"],
+    "zoom_in":    ["mActionZoomIn"],
+    "zoom_out":   ["mActionZoomOut"],
+    "zoom_full":  ["mActionZoomFullExtent"],
+    "zoom_layer": ["mActionZoomToLayer", "mActionZoomToLayers"],
+    "zoom_last":  ["mActionZoomLast"],
+    "identify":   ["mActionIdentify"],
+    "select":     ["mActionSelectFeatures", "mActionSelectRectangle"],
+    "deselect":   ["mActionDeselectAll"],
+    "table":      ["mActionOpenTable"],
+    "measure":    ["mActionMeasure"],
+    "edit":       ["mActionToggleEditing"],
+    "display":    ["mActionDraw"],
+    "help":       ["mActionHelpContents"]
+  },
+  "menus": {
+    "mProjectMenu": "&File",
+    "mSettingsMenu": "&Config"
+  },
+  "docks": {
+    "Layers": "GIS Manager",
+    "Browser": "Location / Mapset"
+  },
+  "toolbars": [
+    {
+      "name": "GRASS GIS Manager",
+      "actions": [
+        "mActionNewProject",
+        "mActionOpenProject",
+        "mActionSaveProject",
+        "|",
+        "mActionAddRasterLayer",
+        "mActionAddOgrLayer",
+        "|",
+        "mActionOpenTable",
+        "mActionToggleEditing",
+        "|",
+        "mActionHelpContents"
+      ]
+    },
+    {
+      "name": "GRASS Map Display",
+      "actions": [
+        "mActionDraw",
+        "|",
+        "mActionPan",
+        "mActionZoomIn",
+        "mActionZoomOut",
+        "mActionZoomLast",
+        "mActionZoomToLayer",
+        "mActionZoomFullExtent",
+        "|",
+        "mActionIdentify",
+        "mActionSelectFeatures",
+        "mActionDeselectAll",
+        "mActionMeasure",
+        "|",
+        "mActionNewPrintLayout"
+      ]
+    }
+  ]
+}

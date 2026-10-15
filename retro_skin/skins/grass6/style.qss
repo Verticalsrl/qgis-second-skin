@@ -1,0 +1,150 @@
+/* Retro Skin - GRASS GIS 6 style: Tcl/Tk GIS Manager, Tk grey #D9D9D9, raised relief, flat selection */
+
+QWidget {
+    font-family: "Helvetica", "Nimbus Sans", "Liberation Sans", "Arial";
+    font-size: 9pt;
+}
+
+QMainWindow, QDialog, QDockWidget, QToolBar, QStatusBar, QMenuBar, QTabWidget::pane {
+    background-color: #D9D9D9;
+    color: #000000;
+}
+
+/* Menu bar and Tk menus: active item raised on #ECECEC */
+QMenuBar { border-bottom: 1px solid #A3A3A3; }
+QMenuBar::item { background: transparent; padding: 3px 8px; border: 1px solid transparent; }
+QMenuBar::item:selected, QMenuBar::item:pressed {
+    background: #ECECEC;
+    border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #8C8C8C; border-bottom: 1px solid #8C8C8C;
+}
+QMenu {
+    background-color: #D9D9D9;
+    border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #8C8C8C; border-bottom: 1px solid #8C8C8C;
+}
+QMenu::item { padding: 3px 20px 3px 24px; color: #000000; border: 1px solid transparent; }
+QMenu::item:selected {
+    background-color: #ECECEC; color: #000000;
+    border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #8C8C8C; border-bottom: 1px solid #8C8C8C;
+}
+QMenu::item:disabled { color: #A3A3A3; }
+QMenu::separator { height: 2px; background: #A3A3A3; border-bottom: 1px solid #FFFFFF; margin: 3px 2px; }
+
+/* Toolbars: Tk frames with raised buttons */
+QToolBar { border: none; border-bottom: 1px solid #A3A3A3; spacing: 0px; padding: 2px; }
+QToolBar::separator { width: 2px; background: #A3A3A3; border-right: 1px solid #FFFFFF; margin: 2px 4px; }
+QToolBar::handle { width: 4px; border-left: 1px solid #FFFFFF; border-right: 1px solid #8C8C8C; margin: 2px 2px; }
+
+QToolButton {
+    background-color: #D9D9D9;
+    border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #8C8C8C; border-bottom: 1px solid #8C8C8C;
+    padding: 2px; margin: 0px;
+}
+QToolButton:hover { background-color: #ECECEC; }
+QToolButton:pressed, QToolButton:checked {
+    background-color: #C3C3C3;
+    border-top: 1px solid #8C8C8C; border-left: 1px solid #8C8C8C;
+    border-right: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+}
+
+QPushButton {
+    background-color: #D9D9D9; color: #000000;
+    border-top: 2px solid #FFFFFF; border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #8C8C8C; border-bottom: 2px solid #8C8C8C;
+    padding: 3px 10px; min-width: 56px;
+}
+QPushButton:hover { background-color: #ECECEC; }
+QPushButton:pressed {
+    border-top: 2px solid #8C8C8C; border-left: 2px solid #8C8C8C;
+    border-right: 2px solid #FFFFFF; border-bottom: 2px solid #FFFFFF;
+}
+QPushButton:default { border: 2px solid #000000; }
+QPushButton:disabled { color: #A3A3A3; }
+
+/* Tk entries and listboxes: sunken, flat grey selection */
+QLineEdit, QSpinBox, QDoubleSpinBox, QComboBox, QTextEdit, QPlainTextEdit,
+QListView, QTreeView, QTableView {
+    background-color: #FFFFFF; color: #000000;
+    border-top: 1px solid #8C8C8C; border-left: 1px solid #8C8C8C;
+    border-right: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+    selection-background-color: #C3C3C3; selection-color: #000000;
+}
+QComboBox { padding: 1px 4px; }
+QComboBox::drop-down {
+    width: 14px; background: #D9D9D9;
+    border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #8C8C8C; border-bottom: 1px solid #8C8C8C;
+}
+QComboBox QAbstractItemView { selection-background-color: #C3C3C3; selection-color: #000000; }
+
+QHeaderView::section {
+    background-color: #D9D9D9; color: #000000; padding: 2px 4px;
+    border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #8C8C8C; border-bottom: 1px solid #8C8C8C;
+}
+
+/* Panels: plain Tk labelframe title */
+QDockWidget::title {
+    background-color: #D9D9D9; color: #000000;
+    border: 1px groove #A3A3A3; padding: 2px 4px; text-align: left;
+}
+
+/* Tabs (Tk notebook) */
+QTabBar::tab {
+    background: #D9D9D9; color: #000000; padding: 3px 10px;
+    border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF; border-right: 1px solid #8C8C8C;
+    margin-right: 1px;
+}
+QTabBar::tab:selected { background: #ECECEC; margin-bottom: -1px; padding-bottom: 4px; }
+QTabBar::tab:!selected { margin-top: 2px; }
+
+/* Tk scroll bars: trough #C3C3C3, raised slider */
+QScrollBar:vertical { background: #C3C3C3; width: 14px; margin: 14px 0 14px 0; }
+QScrollBar:horizontal { background: #C3C3C3; height: 14px; margin: 0 14px 0 14px; }
+QScrollBar::handle {
+    background: #D9D9D9; min-height: 16px; min-width: 16px;
+    border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #8C8C8C; border-bottom: 1px solid #8C8C8C;
+}
+QScrollBar::handle:hover { background: #ECECEC; }
+QScrollBar::add-line, QScrollBar::sub-line {
+    background: #D9D9D9; width: 14px; height: 14px; subcontrol-origin: margin;
+    border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #8C8C8C; border-bottom: 1px solid #8C8C8C;
+}
+QScrollBar::add-line:vertical { subcontrol-position: bottom; }
+QScrollBar::sub-line:vertical { subcontrol-position: top; }
+QScrollBar::add-line:horizontal { subcontrol-position: right; }
+QScrollBar::sub-line:horizontal { subcontrol-position: left; }
+QScrollBar::add-page, QScrollBar::sub-page { background: none; }
+
+/* Status bar: sunken fields, like the GIS Manager output line */
+QStatusBar { border-top: 1px solid #FFFFFF; }
+QStatusBar::item {
+    border-top: 1px solid #8C8C8C; border-left: 1px solid #8C8C8C;
+    border-right: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+}
+
+/* Progress bar: GRASS green */
+QProgressBar {
+    background: #FFFFFF; color: #000000; text-align: center;
+    border-top: 1px solid #8C8C8C; border-left: 1px solid #8C8C8C;
+    border-right: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+}
+QProgressBar::chunk { background-color: #3C8C3C; }
+
+QToolTip { background-color: #FFFFE0; color: #000000; border: 1px solid #000000; }
+QGroupBox { border: 1px groove #A3A3A3; margin-top: 8px; padding-top: 6px; }
+QGroupBox::title { subcontrol-origin: margin; left: 8px; padding: 0 3px; }
+
+/* Buttons with drop-down menu: room for the arrow */
+QToolButton[popupMode="1"] { padding-right: 14px; }
+QToolButton::menu-button { width: 12px; border: none; border-left: 1px solid #8C8C8C; background: transparent; }
+QToolButton::menu-arrow { image: url(@SKINS_DIR@/menu_arrow.png); width: 7px; height: 4px; }
+QToolButton::menu-arrow:disabled { image: url(@SKINS_DIR@/menu_arrow_disabled.png); }
+QToolButton[popupMode="2"] { padding-right: 11px; }
+QToolButton::menu-indicator { image: url(@SKINS_DIR@/menu_arrow.png); width: 7px; height: 4px;
+    subcontrol-origin: padding; subcontrol-position: bottom right; right: 2px; bottom: 3px; }

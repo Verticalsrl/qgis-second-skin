@@ -3,19 +3,19 @@ name=Retro Skin
 qgisMinimumVersion=3.22
 qgisMaximumVersion=4.99
 supportsQt6=True
-description=Just for fun: switch the QGIS look on the fly with retro skins (Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style). A playful toy for GIS nostalgics, and anyone can freely create their own skins!
+description=Just for fun: switch the QGIS look on the fly with retro skins (Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style, GRASS GIS 6 style). A playful toy for GIS nostalgics, and anyone can freely create their own skins!
 about=I created this plugin in a moment of nostalgia for the old days. There is no intention to compare or compete with any software: it's just for fun. Technology moves fast, and sometimes a single icon is enough to unlock a memory. Retro Skin is a small time machine for QGIS: pick a skin, smile, and switch back to the standard look whenever you like.
 
-    Included skins: Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style. Switch skins from Plugins > Retro Skin, from the toolbar button or with Ctrl+Alt+K; "QGIS (original)" restores the standard look.
+    Included skins: Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style, GRASS GIS 6 style. Switch skins from Plugins > Retro Skin, from the toolbar button or with Ctrl+Alt+K; "QGIS (original)" restores the standard look.
 
     Everyone is free to create and share their own skins: a skin is just a folder with a skin.json file, a Qt stylesheet (style.qss) and 16/32 px PNG icons. Copy an existing skin folder, edit it, and it will show up in the menu. See the README in the repository for the format.
 
     All icons are original pixel art.
 
-description[it]=Solo per gioco: cambia al volo l'aspetto di QGIS con skin retro (Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style). Un giocattolo per i nostalgici del GIS, e ognuno puo' creare liberamente le proprie skin!
+description[it]=Solo per gioco: cambia al volo l'aspetto di QGIS con skin retro (Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style, GRASS GIS 6 style). Un giocattolo per i nostalgici del GIS, e ognuno puo' creare liberamente le proprie skin!
 about[it]=Ho creato questo plugin in un momento di nostalgia per i tempi andati. Non c'e' alcuna volonta' di mettere a confronto o in competizione nessun software: e' solo un gioco. La tecnologia corre veloce, e a volte basta un'icona per sbloccare un ricordo. Retro Skin e' una piccola macchina del tempo per QGIS: scegli una skin, fatti un sorriso e torna all'aspetto standard quando vuoi.
 
-    Skin incluse: Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style. Si cambiano da Plugin > Retro Skin, dal pulsante in toolbar o con Ctrl+Alt+K; "QGIS (originale)" ripristina l'aspetto standard.
+    Skin incluse: Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style, GRASS GIS 6 style. Si cambiano da Plugin > Retro Skin, dal pulsante in toolbar o con Ctrl+Alt+K; "QGIS (originale)" ripristina l'aspetto standard.
 
     Ognuno e' libero di creare e condividere le proprie skin: una skin e' solo una cartella con un file skin.json, un foglio di stile Qt (style.qss) e icone PNG da 16/32 px. Copia la cartella di una skin esistente, modificala e comparira' nel menu. Il formato e' descritto nel README del repository.
 
@@ -30,7 +30,7 @@ tracker=https://github.com/verticalsrl/qgis-second-skin/issues
 
 changelog=0.5.1
     - First public release on the QGIS plugin repository
-    - Skins: Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style
+    - Skins: Vintage 95, ArcView 3.x style, ArcMap 8.x style, QGIS 2.x style, GRASS GIS 6 style
     - Retro toolbars, menu and panel titles per skin
     - "Open skins folder" menu entry to create your own skins
     - English and Italian interface, selectable from Retro Skin > Language
