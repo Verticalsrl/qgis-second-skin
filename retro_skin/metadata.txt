@@ -35,6 +35,7 @@ changelog=0.5.1
     - "Open skins folder" menu entry to create your own skins
     - English and Italian interface, selectable from Retro Skin > Language
     - New plugin icon
+    - Info button (i) next to the toolbar button with the project story
     - Coming soon: AI prompts to generate skins and a page to share them
 
 category=Plugins

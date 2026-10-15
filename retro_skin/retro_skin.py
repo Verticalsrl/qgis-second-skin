@@ -16,9 +16,9 @@ import os
 
 from qgis.core import QgsSettings
 from qgis.PyQt.QtCore import QLocale, QSize, Qt, QTimer, QUrl
-from qgis.PyQt.QtGui import QDesktopServices, QIcon
-from qgis.PyQt.QtWidgets import (QApplication, QDockWidget, QMenu, QToolBar,
-                                 QToolButton)
+from qgis.PyQt.QtGui import QDesktopServices, QIcon, QPixmap
+from qgis.PyQt.QtWidgets import (QApplication, QDockWidget, QMenu, QMessageBox,
+                                 QToolBar, QToolButton)
 
 try:  # Qt5 (QGIS 3)
     from qgis.PyQt.QtWidgets import QAction, QActionGroup
@@ -50,6 +50,14 @@ TEXTS = {
         'restored': 'Restored {} QGIS toolbars',
         'language': 'Language',
         'lang_auto': 'Same as QGIS',
+        'info': 'Why Retro Skin',
+        'why': ("I created this plugin in a moment of nostalgia for the old days. "
+                "There is no intention to compare or compete with any software: "
+                "it's just for fun.\n\n"
+                "Technology moves fast, and sometimes a single icon is enough to "
+                "unlock a memory. Retro Skin is a small time machine for QGIS: "
+                "pick a skin, smile, and switch back to the standard look whenever you like.\n\n"
+                "Anyone is free to create and share their own skins."),
     },
     'it': {
         'original': 'QGIS (originale)',
@@ -68,6 +76,14 @@ TEXTS = {
         'restored': 'Ripristinate {} toolbar QGIS',
         'language': 'Lingua',
         'lang_auto': 'Come QGIS',
+        'info': 'Perché Retro Skin',
+        'why': ("Ho creato questo plugin in un momento di nostalgia per i tempi andati. "
+                "Non c'è alcuna volontà di mettere a confronto o in competizione "
+                "nessun software: è solo un gioco.\n\n"
+                "La tecnologia corre veloce, e a volte basta un'icona per sbloccare "
+                "un ricordo. Retro Skin è una piccola macchina del tempo per QGIS: "
+                "scegli una skin, fatti un sorriso e torna all'aspetto standard quando vuoi.\n\n"
+                "Ognuno è libero di creare e condividere le proprie skin."),
     },
 }
 
@@ -107,6 +123,7 @@ class RetroSkin:
         self.menu = None
         self.toolbar = None
         self.button = None
+        self.info_action = None
         self.group = None
         self._cycle_action = None
 
@@ -129,6 +146,12 @@ class RetroSkin:
         self.button.setPopupMode(QToolButton.ToolButtonPopupMode.InstantPopup)
         self.toolbar.addWidget(self.button)
 
+        info_icon = QIcon(os.path.join(PLUGIN_DIR, 'icons', 'info.png'))
+        info_icon.addFile(os.path.join(PLUGIN_DIR, 'icons', 'info@2x.png'), QSize(32, 32))
+        self.info_action = QAction(info_icon, tr('info'), self.toolbar)
+        self.info_action.triggered.connect(self.show_info)
+        self.toolbar.addAction(self.info_action)
+
         self._build_menu()
 
         saved = QgsSettings().value(SETTINGS_KEY, DEFAULT_ID)
@@ -149,6 +172,8 @@ class RetroSkin:
             self.group.deleteLater()
         self.skins[DEFAULT_ID].update(name=tr('original'), description=tr('original_desc'))
         self.button.setToolTip(tr('change') + '\n\n' + tr('about'))
+        self.info_action.setText(tr('info'))
+        self.info_action.setToolTip(tr('info'))
 
         self.group = QActionGroup(self.menu)
         self.group.setExclusive(True)
@@ -181,6 +206,7 @@ class RetroSkin:
         self.menu.addAction(share)
 
         self.menu.addSeparator()
+        self.menu.addAction(self.info_action)
         lang_menu = self.menu.addMenu(tr('language') + ' / Language')
         lang_group = QActionGroup(lang_menu)
         chosen = QgsSettings().value(LANG_KEY, 'auto')
@@ -195,6 +221,14 @@ class RetroSkin:
         self.iface.registerMainWindowAction(cycle, 'Ctrl+Alt+K')
         self._cycle_action = cycle
         self._check(self.current)
+
+    def show_info(self):
+        box = QMessageBox(self.iface.mainWindow())
+        box.setWindowTitle('Retro Skin')
+        box.setText(f'<b>{tr("info")}</b>')
+        box.setInformativeText(tr('why'))
+        box.setIconPixmap(QPixmap(os.path.join(PLUGIN_DIR, 'icon.png')))
+        box.exec()
 
     def set_language(self, code):
         QgsSettings().setValue(LANG_KEY, code)
