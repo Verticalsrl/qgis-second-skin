@@ -94,7 +94,8 @@ class RetroSkin:
     # ---------------------------------------------------------------- setup
     def initGui(self):
         self._load_skins()
-        icon = QIcon(os.path.join(SKINS_DIR, 'arcview3', 'icons', 'arcskin.png'))
+        icon = QIcon(os.path.join(PLUGIN_DIR, 'icons', 'retroskin.png'))
+        icon.addFile(os.path.join(PLUGIN_DIR, 'icons', 'retroskin@2x.png'), QSize(32, 32))
 
         self.menu = QMenu('Retro Skin')
         self.menu.setIcon(icon)

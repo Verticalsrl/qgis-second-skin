@@ -35,7 +35,7 @@ changelog=0.5.0
     - "Open skins folder" menu entry to create your own skins
 
 category=Plugins
-icon=skins/arcview3/icons/arcskin@2x.png
+icon=icon.png
 experimental=True
 deprecated=False
 hasProcessingProvider=no

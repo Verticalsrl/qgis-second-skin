@@ -1,6 +1,6 @@
 # Retro Skin for QGIS
 
-<img src="retro_skin/skins/arcview3/icons/arcskin@2x.png" width="32" align="left" alt="Retro Skin icon">
+<img src="retro_skin/icon.png" width="64" align="left" alt="Retro Skin icon">
 
 **Just for fun!** Retro Skin is a playful toy for GIS nostalgics: it adds no
 analysis feature, it just dresses QGIS up like the desktop GIS of the '90s and
