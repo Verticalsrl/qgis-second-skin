@@ -42,6 +42,9 @@ TEXTS = {
         'about': ("Retro Skin: just for fun, a toy for GIS nostalgics.\n"
                   "Anyone can freely create their own skins: "
                   "copy a folder in skins/ and edit it."),
+        'share': 'Share your skin / create one with AI  (coming soon)',
+        'share_tip': ('Coming soon: ready-made AI prompts to generate a skin, '
+                      'and a page to upload and share it with everyone.'),
         'active': 'Active skin: {}',
         'restored': 'Restored {} QGIS toolbars',
     },
@@ -55,6 +58,9 @@ TEXTS = {
         'about': ("Retro Skin: un gioco per i nostalgici del GIS.\n"
                   "Ognuno puo' creare liberamente le proprie skin: "
                   "copia una cartella in skins/ e modificala."),
+        'share': 'Condividi la tua skin / creala con l\'AI  (in arrivo)',
+        'share_tip': ('In arrivo: prompt pronti per generare una skin con l\'AI '
+                      'e una pagina per caricarla e condividerla con tutti.'),
         'active': 'Skin attiva: {}',
         'restored': 'Ripristinate {} toolbar QGIS',
     },
@@ -121,6 +127,12 @@ class RetroSkin:
         folder.setToolTip(tr('about'))
         folder.triggered.connect(self.open_skins_folder)
         self.menu.addAction(folder)
+        share_icon = QIcon(os.path.join(PLUGIN_DIR, 'icons', 'share.png'))
+        share_icon.addFile(os.path.join(PLUGIN_DIR, 'icons', 'share@2x.png'), QSize(32, 32))
+        share = QAction(share_icon, tr('share'), self.menu)
+        share.setToolTip(tr('share_tip'))
+        share.setEnabled(False)   # coming soon
+        self.menu.addAction(share)
         self.menu.setToolTipsVisible(True)
         self.iface.registerMainWindowAction(cycle, 'Ctrl+Alt+K')
         self._cycle_action = cycle

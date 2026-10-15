@@ -33,6 +33,7 @@ changelog=0.5.0
     - Skins: Vintage 95, ArcView 3.x style, ArcMap 8.x style
     - Retro toolbars, menu and panel titles per skin
     - "Open skins folder" menu entry to create your own skins
+    - Coming soon: AI prompts to generate skins and a page to share them
 
 category=Plugins
 icon=icon.png

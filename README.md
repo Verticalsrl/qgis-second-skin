@@ -73,6 +73,14 @@ lists the action names.
 
 Made a nice skin? Open a pull request or an issue: we'd love to see it!
 
+## Coming soon
+
+<img src="retro_skin/icons/share@2x.png" width="32" align="left" alt="Share icon">
+
+**Create a skin with AI and share it.** We are preparing ready-made prompts to
+generate a complete skin (icons and colours) with your favourite AI tool, and a
+page where you can upload it and share it with everyone. Stay tuned!
+
 ## Build the package
 
 ```
@@ -113,5 +121,13 @@ al riavvio di QGIS comparirà nel menu. Il formato di `skin.json` è descritto
 nella sezione inglese qui sopra (`description_it` è la descrizione in italiano).
 
 Hai fatto una bella skin? Apri una pull request o una issue!
+
+### In arrivo
+
+<img src="retro_skin/icons/share@2x.png" width="32" align="left" alt="Icona condividi">
+
+**Crea una skin con l'AI e condividila.** Stiamo preparando prompt pronti per
+generare una skin completa (icone e colori) con il tuo strumento di AI preferito,
+e una pagina dove caricarla e condividerla con tutti. Restate sintonizzati!
 
 Tutte le icone sono pixel-art originale. Licenza GPL v2 o successiva.
