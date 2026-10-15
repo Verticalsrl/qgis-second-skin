@@ -8,6 +8,10 @@ early 2000s. **Anyone is free to create and share their own skins.**
 
 *[Leggi in italiano](#italiano)*
 
+## Why Retro Skin
+
+I created this plugin in a moment of nostalgia for the old days. There is no intention to compare or compete with any software: it’s just for fun. Technology moves fast, and sometimes a single icon is enough to unlock a memory. Retro Skin is a small time machine for QGIS: pick a skin, smile, and switch back to the standard look whenever you like.
+
 ## Included skins
 
 | Skin | Look |
@@ -79,11 +83,9 @@ creates `dist/retro_skin-<version>.zip`, ready to upload to
 [plugins.qgis.org](https://plugins.qgis.org), after checking the metadata and
 files required by the repository.
 
-## License and trademarks
+## License
 
 GPL v2 or later, see [LICENSE](LICENSE). All icons are original pixel art.
-ArcView and ArcMap are trademarks of Esri. Retro Skin is an independent project,
-not affiliated with or endorsed by Esri: skin names only describe a visual style.
 
 ---
 
@@ -93,6 +95,10 @@ not affiliated with or endorsed by Esri: skin names only describe a visual style
 aggiunge funzioni di analisi, veste semplicemente QGIS come i GIS desktop degli
 anni '90 e primi 2000. **Ognuno può creare e condividere liberamente le proprie
 skin.**
+
+### Perché Retro Skin
+
+Ho creato questo plugin in un momento di nostalgia per i tempi andati. Non c’è alcuna volontà di mettere a confronto o in competizione nessun software: è solo un gioco. La tecnologia corre veloce, e a volte basta un’icona per sbloccare un ricordo. Retro Skin è una piccola macchina del tempo per QGIS: scegli una skin, fatti un sorriso e torna all'aspetto standard quando vuoi.
 
 Le skin si cambiano da **Plugin > Retro Skin**, dal pulsante in toolbar o con
 **Ctrl+Alt+K**; *QGIS (originale)* ripristina l'aspetto standard. L'interfaccia
@@ -108,5 +114,4 @@ nella sezione inglese qui sopra (`description_it` è la descrizione in italiano)
 
 Hai fatto una bella skin? Apri una pull request o una issue!
 
-ArcView e ArcMap sono marchi di Esri. Retro Skin è un progetto indipendente,
-non affiliato né approvato da Esri: i nomi delle skin descrivono solo uno stile grafico. Licenza GPL v2 o successiva.
+Tutte le icone sono pixel-art originale. Licenza GPL v2 o successiva.
