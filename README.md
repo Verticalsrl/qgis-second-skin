@@ -22,7 +22,8 @@ I created this plugin in a moment of nostalgia for the old days. There is no int
 
 Switch skins from **Plugins > Retro Skin**, from the toolbar button or with
 **Ctrl+Alt+K**. *QGIS (original)* restores the standard look. The interface is
-in English, or in Italian when QGIS is set to Italian.
+in English or Italian: by default it follows the QGIS language, and you can
+change it from **Retro Skin > Language**.
 
 Works with QGIS 3.22+ and QGIS 4 (Qt6).
 
@@ -110,7 +111,8 @@ Ho creato questo plugin in un momento di nostalgia per i tempi andati. Non c’�
 
 Le skin si cambiano da **Plugin > Retro Skin**, dal pulsante in toolbar o con
 **Ctrl+Alt+K**; *QGIS (originale)* ripristina l'aspetto standard. L'interfaccia
-è in italiano se QGIS è impostato in italiano, altrimenti in inglese.
+è in italiano o in inglese: di default segue la lingua di QGIS, e si può
+cambiare da **Retro Skin > Lingua**.
 
 ### Crea la tua skin
 

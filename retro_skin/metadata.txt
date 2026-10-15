@@ -20,7 +20,7 @@ about[it]=Ho creato questo plugin in un momento di nostalgia per i tempi andati.
     Ognuno e' libero di creare e condividere le proprie skin: una skin e' solo una cartella con un file skin.json, un foglio di stile Qt (style.qss) e icone PNG da 16/32 px. Copia la cartella di una skin esistente, modificala e comparira' nel menu. Il formato e' descritto nel README del repository.
 
     Tutte le icone sono pixel-art originale.
-version=0.5.0
+version=0.5.1
 author=Vertical S.r.l.
 email=info@vertical-srl.it
 
@@ -28,11 +28,13 @@ homepage=https://github.com/verticalsrl/qgis-second-skin
 repository=https://github.com/verticalsrl/qgis-second-skin
 tracker=https://github.com/verticalsrl/qgis-second-skin/issues
 
-changelog=0.5.0
+changelog=0.5.1
     - First public release on the QGIS plugin repository
     - Skins: Vintage 95, ArcView 3.x style, ArcMap 8.x style
     - Retro toolbars, menu and panel titles per skin
     - "Open skins folder" menu entry to create your own skins
+    - English and Italian interface, selectable from Retro Skin > Language
+    - New plugin icon
     - Coming soon: AI prompts to generate skins and a page to share them
 
 category=Plugins

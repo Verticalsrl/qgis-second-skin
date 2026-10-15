@@ -30,6 +30,7 @@ SKINS_DIR = os.path.join(PLUGIN_DIR, 'skins')
 DEFAULT_ID = 'default'
 SETTINGS_KEY = 'retro_skin/current'
 HIDDEN_KEY = 'retro_skin/hidden_toolbars'   # only used by 0.4, which hid the QGIS toolbars
+LANG_KEY = 'retro_skin/language'            # 'auto' (follow QGIS), 'en' or 'it'
 
 TEXTS = {
     'en': {
@@ -47,6 +48,8 @@ TEXTS = {
                       'and a page to upload and share it with everyone.'),
         'active': 'Active skin: {}',
         'restored': 'Restored {} QGIS toolbars',
+        'language': 'Language',
+        'lang_auto': 'Same as QGIS',
     },
     'it': {
         'original': 'QGIS (originale)',
@@ -63,11 +66,19 @@ TEXTS = {
                       'e una pagina per caricarla e condividerla con tutti.'),
         'active': 'Skin attiva: {}',
         'restored': 'Ripristinate {} toolbar QGIS',
+        'language': 'Lingua',
+        'lang_auto': 'Come QGIS',
     },
 }
 
 
+LANGUAGES = [('en', 'English'), ('it', 'Italiano')]
+
+
 def _language():
+    chosen = QgsSettings().value(LANG_KEY, 'auto')
+    if chosen in TEXTS:
+        return chosen
     locale = QgsSettings().value('locale/userLocale', '') or QLocale().name()
     lang = str(locale)[:2].lower()
     return lang if lang in TEXTS else 'en'
@@ -95,7 +106,9 @@ class RetroSkin:
         self._skin_toolbars = []      # toolbars created by the skin
         self.menu = None
         self.toolbar = None
+        self.button = None
         self.group = None
+        self._cycle_action = None
 
     # ---------------------------------------------------------------- setup
     def initGui(self):
@@ -105,6 +118,38 @@ class RetroSkin:
 
         self.menu = QMenu('Retro Skin')
         self.menu.setIcon(icon)
+        self.menu.setToolTipsVisible(True)
+        self.iface.pluginMenu().addMenu(self.menu)
+
+        self.toolbar = self.iface.addToolBar('Retro Skin')
+        self.toolbar.setObjectName('RetroSkinToolbar')
+        self.button = QToolButton()
+        self.button.setIcon(icon)
+        self.button.setMenu(self.menu)
+        self.button.setPopupMode(QToolButton.ToolButtonPopupMode.InstantPopup)
+        self.toolbar.addWidget(self.button)
+
+        self._build_menu()
+
+        saved = QgsSettings().value(SETTINGS_KEY, DEFAULT_ID)
+        self._check(DEFAULT_ID)
+        # 0.4 hid the QGIS toolbars: show them again once and for all
+        if QgsSettings().value(HIDDEN_KEY):
+            QTimer.singleShot(0, self.show_qgis_toolbars)
+        if saved != DEFAULT_ID and saved in self.skins:
+            # wait until QGIS has created all its toolbars
+            QTimer.singleShot(0, lambda: self.apply(saved))
+
+    def _build_menu(self):
+        """(Re)create the menu entries in the current language."""
+        if self._cycle_action is not None:
+            self.iface.unregisterMainWindowAction(self._cycle_action)
+        self.menu.clear()
+        if self.group is not None:
+            self.group.deleteLater()
+        self.skins[DEFAULT_ID].update(name=tr('original'), description=tr('original_desc'))
+        self.button.setToolTip(tr('change') + '\n\n' + tr('about'))
+
         self.group = QActionGroup(self.menu)
         self.group.setExclusive(True)
         for skin_id, skin in self._ordered_skins():
@@ -131,31 +176,29 @@ class RetroSkin:
         share_icon.addFile(os.path.join(PLUGIN_DIR, 'icons', 'share@2x.png'), QSize(32, 32))
         share = QAction(share_icon, tr('share'), self.menu)
         share.setToolTip(tr('share_tip'))
-        share.setEnabled(False)   # coming soon
+        share.triggered.connect(
+            lambda: self.iface.messageBar().pushInfo('Retro Skin', tr('share_tip')))
         self.menu.addAction(share)
-        self.menu.setToolTipsVisible(True)
+
+        self.menu.addSeparator()
+        lang_menu = self.menu.addMenu(tr('language') + ' / Language')
+        lang_group = QActionGroup(lang_menu)
+        chosen = QgsSettings().value(LANG_KEY, 'auto')
+        for code, label in [('auto', tr('lang_auto'))] + LANGUAGES:
+            act = QAction(label, lang_menu)
+            act.setCheckable(True)
+            act.setChecked(code == chosen)
+            act.triggered.connect(lambda _=False, c=code: self.set_language(c))
+            lang_group.addAction(act)
+            lang_menu.addAction(act)
+
         self.iface.registerMainWindowAction(cycle, 'Ctrl+Alt+K')
         self._cycle_action = cycle
+        self._check(self.current)
 
-        self.iface.pluginMenu().addMenu(self.menu)
-
-        self.toolbar = self.iface.addToolBar('Retro Skin')
-        self.toolbar.setObjectName('RetroSkinToolbar')
-        button = QToolButton()
-        button.setIcon(icon)
-        button.setToolTip(tr('change') + '\n\n' + tr('about'))
-        button.setMenu(self.menu)
-        button.setPopupMode(QToolButton.ToolButtonPopupMode.InstantPopup)
-        self.toolbar.addWidget(button)
-
-        saved = QgsSettings().value(SETTINGS_KEY, DEFAULT_ID)
-        self._check(DEFAULT_ID)
-        # 0.4 hid the QGIS toolbars: show them again once and for all
-        if QgsSettings().value(HIDDEN_KEY):
-            QTimer.singleShot(0, self.show_qgis_toolbars)
-        if saved != DEFAULT_ID and saved in self.skins:
-            # wait until QGIS has created all its toolbars
-            QTimer.singleShot(0, lambda: self.apply(saved))
+    def set_language(self, code):
+        QgsSettings().setValue(LANG_KEY, code)
+        self._build_menu()
 
     def unload(self):
         self.apply(DEFAULT_ID, save=False)
