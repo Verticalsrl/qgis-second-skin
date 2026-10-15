@@ -48,7 +48,7 @@ TEXTS = {
                       'and a page to upload and share it with everyone.'),
         'active': 'Active skin: {}',
         'restored': 'Restored {} QGIS toolbars',
-        'language': 'Language',
+        'language': 'Language / Lingua',
         'lang_auto': 'Same as QGIS',
         'info': 'Why Retro Skin',
         'why': ("I created this plugin in a moment of nostalgia for the old days. "
@@ -74,7 +74,7 @@ TEXTS = {
                       'e una pagina per caricarla e condividerla con tutti.'),
         'active': 'Skin attiva: {}',
         'restored': 'Ripristinate {} toolbar QGIS',
-        'language': 'Lingua',
+        'language': 'Lingua / Language',
         'lang_auto': 'Come QGIS',
         'info': 'Perché Retro Skin',
         'why': ("Ho creato questo plugin in un momento di nostalgia per i tempi andati. "
@@ -207,7 +207,7 @@ class RetroSkin:
 
         self.menu.addSeparator()
         self.menu.addAction(self.info_action)
-        lang_menu = self.menu.addMenu(tr('language') + ' / Language')
+        lang_menu = self.menu.addMenu(tr('language'))
         lang_group = QActionGroup(lang_menu)
         chosen = QgsSettings().value(LANG_KEY, 'auto')
         for code, label in [('auto', tr('lang_auto'))] + LANGUAGES:

@@ -1,0 +1,33 @@
+{
+  "name": "QGIS 2.x style",
+  "description": "QGIS in the Qt4 days: glossy toolbars, Layers Panel and Browser Panel, original pixel-art icons",
+  "description_it": "QGIS ai tempi di Qt4: toolbar lucide, Layers Panel e Browser Panel, icone pixel-art originali",
+  "stylesheet": "style.qss",
+  "toolbar_icon_size": 16,
+  "icons": {
+    "new":        ["mActionNewProject"],
+    "open":       ["mActionOpenProject"],
+    "save":       ["mActionSaveProject"],
+    "print":      ["mActionNewPrintLayout"],
+    "add_vector": ["mActionAddOgrLayer"],
+    "add_raster": ["mActionAddRasterLayer"],
+    "pan":        ["mActionPan"],
+    "zoom_in":    ["mActionZoomIn"],
+    "zoom_out":   ["mActionZoomOut"],
+    "zoom_full":  ["mActionZoomFullExtent"],
+    "zoom_layer": ["mActionZoomToLayer", "mActionZoomToLayers"],
+    "zoom_last":  ["mActionZoomLast"],
+    "identify":   ["mActionIdentify"],
+    "select":     ["mActionSelectFeatures", "mActionSelectRectangle"],
+    "deselect":   ["mActionDeselectAll"],
+    "table":      ["mActionOpenTable"],
+    "measure":    ["mActionMeasure"],
+    "edit":       ["mActionToggleEditing"],
+    "refresh":    ["mActionDraw"],
+    "help":       ["mActionHelpContents"]
+  },
+  "docks": {
+    "Layers": "Layers Panel",
+    "Browser": "Browser Panel"
+  }
+}

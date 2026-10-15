@@ -1,0 +1,135 @@
+/* Retro Skin - QGIS 2.x style: Qt4 era, glossy grey toolbars, light blue hover, QGIS green accents */
+
+QWidget {
+    font-family: "Segoe UI", "Ubuntu", "DejaVu Sans", "Arial";
+    font-size: 9pt;
+}
+
+QMainWindow, QDialog, QDockWidget, QStatusBar, QTabWidget::pane {
+    background-color: #EDEDED;
+    color: #000000;
+}
+
+/* Menu bar and drop-down menus */
+QMenuBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FDFDFD, stop:1 #E4E4E4);
+    border-bottom: 1px solid #B5B5B5;
+}
+QMenuBar::item { background: transparent; padding: 3px 8px; }
+QMenuBar::item:selected, QMenuBar::item:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #EAF3FC, stop:1 #C4DDF6);
+    border: 1px solid #7DA2CE; border-radius: 3px;
+}
+QMenu { background-color: #F5F5F5; border: 1px solid #979797; padding: 2px; }
+QMenu::item { padding: 4px 24px 4px 28px; color: #000000; border: 1px solid transparent; }
+QMenu::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #EAF3FC, stop:1 #C4DDF6);
+    border: 1px solid #7DA2CE; border-radius: 3px; color: #000000;
+}
+QMenu::item:disabled { color: #8D8D8D; }
+QMenu::separator { height: 1px; background: #D7D7D7; margin: 3px 4px 3px 28px; }
+
+/* Glossy toolbars */
+QToolBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FBFBFB, stop:0.5 #F0F0F0, stop:1 #DCDCDC);
+    border: none; border-bottom: 1px solid #B5B5B5;
+    spacing: 2px; padding: 2px;
+}
+QToolBar::separator { width: 1px; background: #B5B5B5; margin: 4px 4px; }
+QToolBar::handle { width: 6px; margin: 3px 2px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #FFFFFF, stop:0.5 #A8A8A8, stop:1 #FFFFFF); }
+
+QToolButton { background: transparent; border: 1px solid transparent; border-radius: 3px; padding: 2px; }
+QToolButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #EAF3FC, stop:1 #C4DDF6);
+    border: 1px solid #7DA2CE;
+}
+QToolButton:pressed, QToolButton:checked {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #C4DDF6, stop:1 #A9CBEF);
+    border: 1px solid #569DE5;
+}
+
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #F6F6F6, stop:1 #DDDDDD);
+    color: #000000; border: 1px solid #ACACAC; border-radius: 3px;
+    padding: 3px 12px; min-width: 60px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #EAF3FC, stop:1 #C4DDF6);
+    border: 1px solid #7DA2CE;
+}
+QPushButton:pressed { background: #C4DDF6; border: 1px solid #569DE5; }
+QPushButton:default { border: 1px solid #3C7FB1; }
+QPushButton:disabled { color: #8D8D8D; background: #F0F0F0; border-color: #C8C8C8; }
+
+/* Fields and views */
+QLineEdit, QSpinBox, QDoubleSpinBox, QComboBox, QTextEdit, QPlainTextEdit,
+QListView, QTreeView, QTableView {
+    background-color: #FFFFFF; color: #000000;
+    border: 1px solid #ABADB3;
+    selection-background-color: #3399FF; selection-color: #FFFFFF;
+}
+QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QComboBox:focus { border: 1px solid #569DE5; }
+QComboBox { padding: 1px 4px; border-radius: 2px; }
+QComboBox::drop-down { width: 16px; border-left: 1px solid #ABADB3; background: #F0F0F0; }
+QTreeView::item:selected, QListView::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #DCEBFC, stop:1 #C1DBFC);
+    border: 1px solid #7DA2CE; color: #000000;
+}
+QTreeView::item:hover, QListView::item:hover { background: #E5F3FB; }
+
+QHeaderView::section {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #FFFFFF, stop:1 #E3E3E3);
+    color: #000000; padding: 3px 5px;
+    border: none; border-right: 1px solid #D5D5D5; border-bottom: 1px solid #B5B5B5;
+}
+
+/* Panels: grey gradient title bar with bold text */
+QDockWidget::title {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #F6F6F6, stop:1 #D4D4D4);
+    border: 1px solid #B5B5B5; padding: 3px 5px; text-align: left;
+}
+QDockWidget { font-weight: bold; }
+QDockWidget > QWidget { font-weight: normal; }
+
+/* Tabs */
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #F6F6F6, stop:1 #DDDDDD);
+    color: #000000; padding: 4px 10px; border: 1px solid #ACACAC; border-bottom: none;
+    border-top-left-radius: 3px; border-top-right-radius: 3px; margin-right: 1px;
+}
+QTabBar::tab:selected { background: #FFFFFF; margin-bottom: -1px; }
+QTabBar::tab:!selected { margin-top: 2px; }
+QTabBar::tab:hover { background: #E5F3FB; }
+
+/* Scroll bars */
+QScrollBar:vertical { background: #F0F0F0; width: 15px; margin: 0; }
+QScrollBar:horizontal { background: #F0F0F0; height: 15px; margin: 0; }
+QScrollBar::handle {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #F5F5F5, stop:1 #DADADA);
+    border: 1px solid #A0A0A0; border-radius: 3px; min-height: 20px; min-width: 20px; margin: 1px;
+}
+QScrollBar::handle:hover { border-color: #7DA2CE; }
+QScrollBar::add-line, QScrollBar::sub-line { width: 0px; height: 0px; }
+QScrollBar::add-page, QScrollBar::sub-page { background: none; }
+
+/* Status bar */
+QStatusBar { border-top: 1px solid #C8C8C8; }
+QStatusBar::item { border: none; }
+
+/* QGIS green progress bar */
+QProgressBar { background: #FFFFFF; color: #000000; text-align: center; border: 1px solid #ABADB3; border-radius: 2px; }
+QProgressBar::chunk { background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #C1DC6E, stop:1 #8AB43C); }
+
+QToolTip { background-color: #FFFFE1; color: #000000; border: 1px solid #767676; }
+QGroupBox { border: 1px solid #C8C8C8; border-radius: 3px; margin-top: 9px; padding-top: 6px; }
+QGroupBox::title { subcontrol-origin: margin; left: 8px; padding: 0 3px; }
+
+/* Buttons with drop-down menu: room for the arrow */
+QToolButton[popupMode="1"] { padding-right: 14px; }
+QToolButton::menu-button { width: 12px; border: none; background: transparent; }
+QToolButton::menu-arrow { image: url(@SKINS_DIR@/menu_arrow.png); width: 7px; height: 4px; }
+QToolButton::menu-arrow:disabled { image: url(@SKINS_DIR@/menu_arrow_disabled.png); }
+QToolButton[popupMode="2"] { padding-right: 11px; }
+QToolButton::menu-indicator { image: url(@SKINS_DIR@/menu_arrow.png); width: 7px; height: 4px;
+    subcontrol-origin: padding; subcontrol-position: bottom right; right: 2px; bottom: 3px; }

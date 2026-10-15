@@ -19,6 +19,7 @@ I created this plugin in a moment of nostalgia for the old days. There is no int
 | Vintage 95 | Windows 95 grey, raised buttons, 16x16 pixel-art icons |
 | ArcView 3.x style | '90s desktop GIS: Themes, raised Table of Contents |
 | ArcMap 8.x style | Early 2000s: Windows 2000, flat toolbars, light blue selection |
+| QGIS 2.x style | QGIS in the Qt4 days: glossy toolbars, Layers Panel, green accents |
 
 Switch skins from **Plugins > Retro Skin**, from the toolbar button or with
 **Ctrl+Alt+K**. *QGIS (original)* restores the standard look. The interface is
